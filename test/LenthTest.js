@@ -12,4 +12,11 @@ describe('tests for length conversion',function(){
         oneYard=length.unitConversion(1,length.Length.YARD);
         assert.equal(oneYard,threeFeet);
     })
+
+    it('given 1 feet should not be equal 1 yard',function(){
+        threeFeet=length.unitConversion(1,length.Length.FEET);
+        oneYard=length.unitConversion(1,length.Length.YARD);
+        assert.notEqual(oneYard,threeFeet);
+    })
+
 });
